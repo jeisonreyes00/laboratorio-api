@@ -11,8 +11,8 @@ export async function seedDemoUsers() {
   const curr = getDb();
   if (curr.users.length) return;
   const hash = await bcrypt.hash('123456', 10);
-  curr.users.push({ id: uuidv4(), name: 'Admin', email: 'admin@example.com', role: 'admin', passwordHash: hash });
-  curr.users.push({ id: uuidv4(), name: 'Usuario', email: 'user@example.com', role: 'user', passwordHash: hash });
+  curr.users.push({ id: uuidv4(), name: 'Admin', email: 'jeisonr843@gmail.com', role: 'admin', passwordHash: hash });
+  curr.users.push({ id: uuidv4(), name: 'Usuario', email: 'jeisonhreyes00@gmail.com', role: 'user', passwordHash: hash });
   saveDb(curr);
 }
 export function appendLog(type, email, details={}) { const curr = getDb(); curr.logs.push({ ts: new Date().toISOString(), type, email, details }); saveDb(curr); }
